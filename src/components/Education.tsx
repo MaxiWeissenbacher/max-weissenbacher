@@ -1,0 +1,159 @@
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Book } from "lucide-react";
+
+const Education = () => {
+  const education = [
+    {
+      degree: "Master of Science in Artificial Intelligence",
+      school: "Stanford University",
+      period: "2017 - 2019",
+      location: "Stanford, CA",
+      gpa: "3.9/4.0",
+      relevant: [
+        "Machine Learning Theory and Applications",
+        "Deep Learning and Neural Networks",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "AI Ethics and Safety"
+      ],
+      achievements: [
+        "Dean's List for 4 consecutive semesters",
+        "Research assistant in Computer Vision Lab",
+        "Published 2 papers in top-tier AI conferences"
+      ]
+    },
+    {
+      degree: "Bachelor of Science in Computer Science",
+      school: "MIT",
+      period: "2013 - 2017",
+      location: "Cambridge, MA",
+      gpa: "3.8/4.0",
+      relevant: [
+        "Data Structures and Algorithms",
+        "Software Engineering",
+        "Database Systems",
+        "Statistics and Probability",
+        "Linear Algebra",
+        "Discrete Mathematics"
+      ],
+      achievements: [
+        "Summa Cum Laude graduate",
+        "President of AI Student Society",
+        "Winner of HackMIT 2016"
+      ]
+    }
+  ];
+
+  const certifications = [
+    { name: "AWS Certified Machine Learning - Specialty", issuer: "Amazon Web Services", year: "2023" },
+    { name: "TensorFlow Developer Certificate", issuer: "Google", year: "2022" },
+    { name: "Deep Learning Specialization", issuer: "Coursera - Andrew Ng", year: "2021" },
+    { name: "MLOps Engineering", issuer: "Udacity", year: "2022" },
+    { name: "Advanced NLP with Python", issuer: "DataCamp", year: "2023" }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-slate-900/50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Education & Credentials
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Strong academic foundation combined with continuous learning and professional development
+          </p>
+        </div>
+
+        {/* Education */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Academic Background</h3>
+          <div className="space-y-8">
+            {education.map((edu, index) => (
+              <Card 
+                key={index} 
+                className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 animate-fade-in"
+                style={{animationDelay: `${index * 0.2}s`}}
+              >
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
+                        <Book className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-white text-xl">{edu.degree}</CardTitle>
+                        <CardDescription className="text-purple-400 font-semibold">
+                          {edu.school}
+                        </CardDescription>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-gray-300 font-medium">{edu.period}</p>
+                      <p className="text-gray-400 text-sm">{edu.location}</p>
+                      <Badge className="bg-green-600 text-white mt-1">GPA: {edu.gpa}</Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div>
+                    <h4 className="text-white font-semibold mb-3">Relevant Coursework:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {edu.relevant.map((course, courseIndex) => (
+                        <Badge 
+                          key={courseIndex}
+                          variant="outline" 
+                          className="border-purple-500/50 text-purple-300 text-xs"
+                        >
+                          {course}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-white font-semibold mb-3">Achievements:</h4>
+                    <ul className="space-y-2">
+                      {edu.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex} className="text-gray-300 flex items-start">
+                          <span className="text-purple-400 mr-2 flex-shrink-0">•</span>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div>
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">Professional Certifications</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => (
+              <Card 
+                key={index} 
+                className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 animate-fade-in"
+                style={{animationDelay: `${index * 0.1}s`}}
+              >
+                <CardContent className="p-6 text-center">
+                  <h4 className="text-white font-semibold mb-2">{cert.name}</h4>
+                  <p className="text-purple-400 text-sm mb-2">{cert.issuer}</p>
+                  <Badge variant="secondary" className="bg-slate-700 text-gray-300">
+                    {cert.year}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;
