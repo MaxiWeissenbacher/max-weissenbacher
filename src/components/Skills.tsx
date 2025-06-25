@@ -50,35 +50,36 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Technical Arsenal
+    <section id="skills" className="section-spacing bg-gray-50/50">
+      <div className="max-w-6xl mx-auto container-padding">
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+            Technical Expertise
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-16 h-px bg-gray-400 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
             A comprehensive toolkit spanning AI/ML, software development, and data engineering
           </p>
         </div>
 
         {/* Skills Categories */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
-              <CardHeader>
-                <CardTitle className="text-white text-xl">{category.title}</CardTitle>
-                <CardDescription className="text-gray-400">{category.description}</CardDescription>
+            <Card key={index} className="glass-effect hover:shadow-md transition-all duration-300 border-0">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-gray-900 text-lg font-medium">{category.title}</CardTitle>
+                <CardDescription className="text-gray-500 text-sm">{category.description}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex} className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-purple-400">{skill.level}%</span>
+                      <span className="text-gray-700 font-medium">{skill.name}</span>
+                      <span className="text-gray-500">{skill.level}%</span>
                     </div>
                     <Progress 
                       value={skill.level} 
-                      className="h-2 bg-slate-700"
+                      className="h-1.5 bg-gray-200"
                     />
                   </div>
                 ))}
@@ -89,14 +90,13 @@ const Skills = () => {
 
         {/* Technology Tags */}
         <div className="text-center">
-          <h3 className="text-2xl font-semibold text-white mb-8">Technologies & Frameworks</h3>
+          <h3 className="text-xl font-medium text-gray-900 mb-8">Technologies & Frameworks</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {technologies.map((tech, index) => (
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 text-purple-300 border-purple-500/30 px-4 py-2 text-sm hover:scale-105 transition-transform duration-200 animate-fade-in"
-                style={{animationDelay: `${index * 0.05}s`}}
+                className="bg-white border border-gray-200 text-gray-700 px-4 py-2 text-sm font-normal hover:bg-gray-50 transition-colors duration-200"
               >
                 {tech}
               </Badge>

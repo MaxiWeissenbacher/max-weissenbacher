@@ -8,10 +8,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 relative bg-gradient-to-b from-slate-50 to-white">
+    <section className="min-h-screen flex items-center justify-center container-padding relative">
       <div className="text-center max-w-4xl mx-auto">
         {/* Profile Image */}
-        <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden bg-gray-100 border-4 border-white shadow-xl">
+        <div className="w-32 h-32 lg:w-40 lg:lg:h-40 mx-auto mb-8 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-200 shadow-sm">
           <img 
             src="/placeholder.svg" 
             alt="Profile" 
@@ -19,37 +19,37 @@ const Hero = () => {
           />
         </div>
         
-        <h1 className="text-5xl md:text-6xl font-light text-gray-900 mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-3 tracking-tight">
           AI Engineer
         </h1>
         
-        <div className="w-24 h-1 bg-gray-900 mx-auto mb-6"></div>
+        <div className="w-16 h-px bg-gray-400 mx-auto mb-8"></div>
         
-        <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-lg lg:text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto text-balance">
           Crafting intelligent solutions with cutting-edge AI technologies.
           Passionate about machine learning and innovative software development.
         </p>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           <Button 
             variant="outline" 
-            className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-none transition-all duration-200"
+            className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200"
           >
-            <Mail className="w-5 h-5 mr-2" />
+            <Mail className="w-4 h-4 mr-2" />
             Contact
           </Button>
           <Button 
             variant="outline" 
-            className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-none transition-all duration-200"
+            className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200"
           >
-            <Github className="w-5 h-5 mr-2" />
+            <Github className="w-4 h-4 mr-2" />
             GitHub
           </Button>
           <Button 
             variant="outline" 
-            className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 rounded-none transition-all duration-200"
+            className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200"
           >
-            <Linkedin className="w-5 h-5 mr-2" />
+            <Linkedin className="w-4 h-4 mr-2" />
             LinkedIn
           </Button>
         </div>
@@ -61,9 +61,9 @@ const Hero = () => {
           variant="ghost" 
           size="sm" 
           onClick={scrollToSection}
-          className="text-gray-400 hover:text-gray-600 flex flex-col items-center animate-bounce"
+          className="text-gray-400 hover:text-gray-600 flex flex-col items-center animate-bounce p-2"
         >
-          <ChevronDown className="w-6 h-6" />
+          <ChevronDown className="w-5 h-5" />
         </Button>
       </div>
     </section>

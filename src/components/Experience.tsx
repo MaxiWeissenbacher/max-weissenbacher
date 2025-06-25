@@ -50,13 +50,14 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-slate-900/50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Professional Journey
+    <section className="section-spacing">
+      <div className="max-w-6xl mx-auto container-padding">
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+            Professional Experience
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="w-16 h-px bg-gray-400 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
             Building innovative AI solutions and leading high-impact projects across diverse industries
           </p>
         </div>
@@ -65,37 +66,36 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className="bg-slate-800/50 border-slate-700 backdrop-blur-sm hover:bg-slate-800/70 transition-all duration-300 animate-fade-in"
-              style={{animationDelay: `${index * 0.2}s`}}
+              className="glass-effect hover:shadow-md transition-all duration-300 border-0"
             >
-              <CardHeader>
+              <CardHeader className="pb-6">
                 <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
-                      <Briefcase className="w-6 h-6 text-white" />
+                  <div className="flex items-center gap-4">
+                    <div className="p-2.5 bg-gray-100 rounded-lg">
+                      <Briefcase className="w-5 h-5 text-gray-600" />
                     </div>
                     <div>
-                      <CardTitle className="text-white text-xl">{exp.title}</CardTitle>
-                      <CardDescription className="text-purple-400 font-semibold">
+                      <CardTitle className="text-gray-900 text-xl font-medium">{exp.title}</CardTitle>
+                      <CardDescription className="text-gray-700 font-medium text-base">
                         {exp.company}
                       </CardDescription>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-gray-300 font-medium">{exp.period}</p>
-                    <p className="text-gray-400 text-sm">{exp.location}</p>
+                    <p className="text-gray-700 font-medium">{exp.period}</p>
+                    <p className="text-gray-500 text-sm">{exp.location}</p>
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+                <p className="text-gray-600 leading-relaxed">{exp.description}</p>
                 
                 <div>
-                  <h4 className="text-white font-semibold mb-3">Key Achievements:</h4>
+                  <h4 className="text-gray-900 font-medium mb-3">Key Achievements</h4>
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="text-gray-300 flex items-start">
-                        <span className="text-purple-400 mr-2 flex-shrink-0">•</span>
+                      <li key={achIndex} className="text-gray-600 flex items-start">
+                        <span className="text-gray-400 mr-3 flex-shrink-0 mt-2">•</span>
                         {achievement}
                       </li>
                     ))}
@@ -103,13 +103,13 @@ const Experience = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-white font-semibold mb-3">Technologies Used:</h4>
+                  <h4 className="text-gray-900 font-medium mb-3">Technologies</h4>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, techIndex) => (
                       <Badge 
                         key={techIndex}
                         variant="outline" 
-                        className="border-purple-500/50 text-purple-300 hover:bg-purple-500/20"
+                        className="border-gray-200 text-gray-600 bg-white hover:bg-gray-50 font-normal"
                       >
                         {tech}
                       </Badge>
