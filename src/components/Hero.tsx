@@ -1,4 +1,3 @@
-
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -37,7 +36,7 @@ const Hero = () => {
             {/* Main image container */}
             <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border-4 border-white transform transition-all duration-300 hover:scale-105 shadow-hover">
               <img 
-                src="/placeholder.svg" 
+                src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
                 alt="Maximilian Weissenbacher" 
                 className="w-full h-full object-cover"
               />
