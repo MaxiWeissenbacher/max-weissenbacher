@@ -28,13 +28,19 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center container-padding relative">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Profile Image */}
-        <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-8 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 border border-gray-200 shadow-sm">
-          <img 
-            src="/placeholder.svg" 
-            alt="Maximilian Weissenbacher" 
-            className="w-full h-full object-cover"
-          />
+        {/* Profile Image with Cool Shape */}
+        <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-8 relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden shadow-xl transform rotate-3 hover:rotate-6 transition-transform duration-300"
+               style={{
+                 clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'
+               }}>
+            <img 
+              src="/placeholder.svg" 
+              alt="Maximilian Weissenbacher" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-3 tracking-tight min-h-[1.2em]">

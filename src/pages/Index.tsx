@@ -1,4 +1,5 @@
 
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -10,13 +11,28 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <Hero />
-      <About />
-      <Experience />
-      <Publications />
-      <Projects />
-      <Education />
-      <Contact />
+      <Navigation />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="experience">
+        <Experience />
+      </section>
+      <section id="publications">
+        <Publications />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="education">
+        <Education />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </div>
   );
 };
