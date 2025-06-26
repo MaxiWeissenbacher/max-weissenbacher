@@ -43,7 +43,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-soft">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="font-medium text-gray-900">
@@ -57,9 +57,9 @@ const Navigation = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => scrollToSection(section.id)}
-                className={`text-sm font-normal transition-colors ${
+                className={`text-sm font-normal transition-all duration-200 shadow-hover ${
                   activeSection === section.id
-                    ? "text-gray-900 bg-gray-100"
+                    ? "text-gray-900 bg-gray-100 shadow-modern"
                     : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                 }`}
               >

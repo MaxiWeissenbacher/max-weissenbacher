@@ -44,10 +44,10 @@ const Projects = () => {
     <section className="section-spacing">
       <div className="max-w-4xl mx-auto container-padding">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight drop-shadow-sm">
             Featured Projects
           </h2>
-          <div className="w-16 h-px bg-gray-400 mx-auto mb-6"></div>
+          <div className="w-16 h-px bg-gray-400 mx-auto mb-6 shadow-soft"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
             Innovative AI solutions that solve real-world problems
           </p>
@@ -57,7 +57,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="glass-effect border-0 hover:shadow-md transition-all duration-300"
+              className="glass-effect border-0 hover:shadow-lg transition-all duration-300 shadow-modern shadow-hover"
             >
               <CardHeader className="pb-4">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
@@ -67,7 +67,7 @@ const Projects = () => {
                     </CardTitle>
                     <Badge 
                       variant="secondary"
-                      className={`text-xs font-normal ${
+                      className={`text-xs font-normal shadow-soft ${
                         project.status === 'Production' 
                           ? 'bg-green-50 text-green-700 border-green-200' 
                           : project.status === 'Beta'
@@ -82,7 +82,7 @@ const Projects = () => {
                     <Button 
                       size="sm" 
                       variant="outline"
-                      className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
+                      className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal shadow-modern shadow-hover"
                     >
                       <Github className="w-4 h-4 mr-1" />
                       Code
@@ -90,7 +90,7 @@ const Projects = () => {
                     <Button 
                       size="sm" 
                       variant="outline"
-                      className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
+                      className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal shadow-modern shadow-hover"
                     >
                       <ExternalLink className="w-4 h-4 mr-1" />
                       Demo
@@ -111,7 +111,7 @@ const Projects = () => {
                       <Badge 
                         key={techIndex}
                         variant="outline" 
-                        className="border-gray-200 text-gray-600 text-xs font-normal"
+                        className="border-gray-200 text-gray-600 text-xs font-normal shadow-soft"
                       >
                         {tech}
                       </Badge>

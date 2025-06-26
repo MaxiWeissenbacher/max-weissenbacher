@@ -53,10 +53,10 @@ const Experience = () => {
     <section className="section-spacing">
       <div className="max-w-6xl mx-auto container-padding">
         <div className="text-center mb-16 lg:mb-20">
-          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight drop-shadow-sm">
             Professional Experience
           </h2>
-          <div className="w-16 h-px bg-gray-400 mx-auto mb-6"></div>
+          <div className="w-16 h-px bg-gray-400 mx-auto mb-6 shadow-soft"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
             Building innovative AI solutions and leading high-impact projects across diverse industries
           </p>
@@ -66,12 +66,12 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className="glass-effect hover:shadow-md transition-all duration-300 border-0"
+              className="glass-effect hover:shadow-lg transition-all duration-300 border-0 shadow-modern shadow-hover"
             >
               <CardHeader className="pb-6">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="p-2.5 bg-gray-100 rounded-lg">
+                    <div className="p-2.5 bg-gray-100 rounded-lg shadow-modern">
                       <Briefcase className="w-5 h-5 text-gray-600" />
                     </div>
                     <div>
@@ -109,7 +109,7 @@ const Experience = () => {
                       <Badge 
                         key={techIndex}
                         variant="outline" 
-                        className="border-gray-200 text-gray-600 bg-white hover:bg-gray-50 font-normal"
+                        className="border-gray-200 text-gray-600 bg-white hover:bg-gray-50 font-normal shadow-soft"
                       >
                         {tech}
                       </Badge>

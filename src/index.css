@@ -107,7 +107,7 @@
   }
   
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-sm border border-gray-200/50;
+    @apply bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg;
   }
   
   .section-spacing {
@@ -116,5 +116,26 @@
   
   .container-padding {
     @apply px-6 lg:px-8;
+  }
+  
+  /* Modern shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+  
+  .shadow-modern {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-hover {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .shadow-hover:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 }
