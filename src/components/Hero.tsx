@@ -28,18 +28,27 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center container-padding relative">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Profile Image with Cool Shape */}
-        <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto mb-8 relative group">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <div className="relative w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden shadow-xl transform rotate-3 hover:rotate-6 transition-transform duration-300"
-               style={{
-                 clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'
-               }}>
-            <img 
-              src="/placeholder.svg" 
-              alt="Maximilian Weissenbacher" 
-              className="w-full h-full object-cover"
-            />
+        {/* Modern Profile Image */}
+        <div className="relative mb-8 group">
+          <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto relative">
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-20"></div>
+            
+            {/* Main image container */}
+            <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border-4 border-white transform transition-transform duration-300 hover:scale-105">
+              <img 
+                src="/placeholder.svg" 
+                alt="Maximilian Weissenbacher" 
+                className="w-full h-full object-cover"
+              />
+              
+              {/* Subtle overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+            </div>
+            
+            {/* Floating accent elements */}
+            <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-70 animate-bounce"></div>
+            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-500 rounded-full opacity-70 animate-bounce" style={{ animationDelay: '0.5s' }}></div>
           </div>
         </div>
         
