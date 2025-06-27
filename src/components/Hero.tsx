@@ -1,3 +1,4 @@
+
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -63,8 +64,8 @@ const Hero = () => {
         <div className="w-16 h-px bg-gray-400 mx-auto mb-8 shadow-soft"></div>
         
         <p className="text-lg lg:text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto text-balance drop-shadow-sm">
-          AI Engineer & Researcher crafting intelligent solutions with cutting-edge technologies.
-          Passionate about machine learning and innovative software development.
+          AI Engineer @ PwC Germany, specializing in LLM deployments and GenAI solutions 
+          for government agencies. Passionate about NLP, machine learning, and applied AI research.
         </p>
       </div>
       

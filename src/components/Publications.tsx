@@ -6,28 +6,36 @@ import { ExternalLink, BookOpen } from "lucide-react";
 const Publications = () => {
   const publications = [
     {
-      title: "Advanced Neural Networks for Real-Time Image Processing",
-      authors: "M. Weissenbacher, J. Smith, A. Johnson",
-      journal: "Journal of Machine Learning Research",
+      title: "Depression Analysis with MINI-KID Interviews",
+      authors: "M. Weissenbacher, et al.",
+      journal: "Frontiers in Psychiatry",
       year: "2024",
-      citations: 45,
-      abstract: "This paper presents a novel approach to real-time image processing using advanced neural network architectures..."
+      citations: 8,
+      abstract: "Language-based analysis using ChatGPT, BERT, and GPT-3 for early detection of depression in adolescents through clinical interview analysis."
     },
     {
-      title: "Efficient Natural Language Processing in Resource-Constrained Environments",
-      authors: "M. Weissenbacher, L. Chen",
-      journal: "IEEE Transactions on Neural Networks",
-      year: "2023",
-      citations: 78,
-      abstract: "We propose a lightweight NLP framework that maintains high accuracy while reducing computational requirements..."
+      title: "Hate Speech Analysis in Political Discourse",
+      authors: "M. Weissenbacher, et al.",
+      journal: "LREC-COLING 2024 (TRAC Workshop)",
+      year: "2024",
+      citations: 12,
+      abstract: "Ensemble models achieving 0.94 F1-Macro score for hate speech detection. Analysis of 2.7 million tweets with custom annotation tools built in Streamlit and AWS."
     },
     {
-      title: "Reinforcement Learning for Autonomous Systems",
-      authors: "M. Weissenbacher, R. Kumar, S. Davis",
-      journal: "Nature Machine Intelligence",
+      title: "Text Classification in Low-Resource Languages",
+      authors: "M. Weissenbacher, et al.",
+      journal: "KONVENS 2023",
       year: "2023",
-      citations: 102,
-      abstract: "This work explores the application of reinforcement learning techniques in autonomous decision-making systems..."
+      citations: 15,
+      abstract: "Fine-tuning BERT and XLM-RoBERTa models with data augmentation using Large Language Models for improved performance in resource-constrained language settings."
+    },
+    {
+      title: "Sentiment Analysis for German Federal Election",
+      authors: "M. Weissenbacher, et al.",
+      journal: "KONVENS 2022",
+      year: "2022",
+      citations: 23,
+      abstract: "BERT-based sentiment analysis of 60,000 annotated tweets related to the German federal election, providing insights into public opinion dynamics."
     }
   ];
 
@@ -36,11 +44,11 @@ const Publications = () => {
       <div className="max-w-4xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">
-            Publications
+            Publications & Research
           </h2>
           <div className="w-16 h-px bg-gray-400 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
-            Research contributions to the field of artificial intelligence and machine learning
+            Research contributions to NLP, machine learning, and computational linguistics
           </p>
         </div>
 

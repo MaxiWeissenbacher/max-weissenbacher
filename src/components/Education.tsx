@@ -6,53 +6,76 @@ import { Book } from "lucide-react";
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Artificial Intelligence",
-      school: "Stanford University",
-      period: "2017 - 2019",
-      location: "Stanford, CA",
-      gpa: "3.9/4.0",
+      degree: "Master of Science in Information Science",
+      school: "University of Regensburg",
+      period: "2021 - 2023",
+      location: "Regensburg, Germany",
+      gpa: "1.2 (GPA 3.8)",
       relevant: [
-        "Machine Learning Theory and Applications",
-        "Deep Learning and Neural Networks",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Reinforcement Learning",
-        "AI Ethics and Safety"
+        "Data Science (Top 5%)",
+        "Natural Language Engineering",
+        "Machine Learning",
+        "Deep Learning",
+        "Research Methods",
+        "Advanced Statistics"
       ],
       achievements: [
-        "Dean's List for 4 consecutive semesters",
-        "Research assistant in Computer Vision Lab",
-        "Published 2 papers in top-tier AI conferences"
+        "Graduated with distinction (Grade 1.2)",
+        "Top 5% in Data Science specialization",
+        "Focus on NLP and Machine Learning research",
+        "Published multiple research papers during studies"
       ]
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "MIT",
-      period: "2013 - 2017",
-      location: "Cambridge, MA",
-      gpa: "3.8/4.0",
+      degree: "Bachelor of Arts in Media and Information Science",
+      school: "University of Regensburg",
+      period: "2018 - 2021",
+      location: "Regensburg, Germany",
+      gpa: "2.3",
       relevant: [
-        "Data Structures and Algorithms",
-        "Software Engineering",
+        "NLP with Python",
+        "Object-Oriented Programming in Java",
+        "Algorithms & Data Structures",
+        "Information Retrieval",
         "Database Systems",
-        "Statistics and Probability",
-        "Linear Algebra",
-        "Discrete Mathematics"
+        "Web Technologies"
       ],
       achievements: [
-        "Summa Cum Laude graduate",
-        "President of AI Student Society",
-        "Winner of HackMIT 2016"
+        "Strong foundation in programming and data science",
+        "Completed multiple practical projects",
+        "Developed expertise in information systems",
+        "Active participation in research projects"
+      ]
+    },
+    {
+      degree: "Abitur",
+      school: "Gymnasium LSH-Marquartstein",
+      period: "2016",
+      location: "Marquartstein, Germany",
+      gpa: "2.7",
+      relevant: [
+        "Mathematics",
+        "Computer Science",
+        "Physics",
+        "English",
+        "German",
+        "Economics"
+      ],
+      achievements: [
+        "Successfully completed German Abitur",
+        "Strong performance in STEM subjects",
+        "Prepared for university-level studies",
+        "Developed analytical and problem-solving skills"
       ]
     }
   ];
 
   const certifications = [
-    { name: "AWS Certified Machine Learning - Specialty", issuer: "Amazon Web Services", year: "2023" },
-    { name: "TensorFlow Developer Certificate", issuer: "Google", year: "2022" },
-    { name: "Deep Learning Specialization", issuer: "Coursera - Andrew Ng", year: "2021" },
-    { name: "MLOps Engineering", issuer: "Udacity", year: "2022" },
-    { name: "Advanced NLP with Python", issuer: "DataCamp", year: "2023" }
+    { name: "IT Advanced Training Certificate", issuer: "University of Regensburg", year: "2021" },
+    { name: "Data Science Specialization", issuer: "University Coursework", year: "2023" },
+    { name: "Machine Learning Research", issuer: "Academic Research", year: "2023" },
+    { name: "NLP with Python", issuer: "University Coursework", year: "2020" },
+    { name: "Advanced Analytics", issuer: "Professional Development", year: "2023" }
   ];
 
   return (
@@ -134,7 +157,7 @@ const Education = () => {
 
         {/* Certifications */}
         <div>
-          <h3 className="text-xl font-medium text-gray-900 mb-8 text-center">Professional Certifications</h3>
+          <h3 className="text-xl font-medium text-gray-900 mb-8 text-center">Additional Qualifications</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => (
               <Card 

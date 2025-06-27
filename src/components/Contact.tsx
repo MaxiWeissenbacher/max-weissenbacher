@@ -30,6 +30,7 @@ const Contact = () => {
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
                 size="lg"
+                onClick={() => window.open('mailto:maxweissenbacher98@gmail.com', '_blank')}
               >
                 <Mail className="w-4 h-4 mr-2" />
                 Email
@@ -39,6 +40,7 @@ const Contact = () => {
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
                 size="lg"
+                onClick={() => window.open('https://linkedin.com', '_blank')}
               >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
@@ -48,6 +50,7 @@ const Contact = () => {
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
                 size="lg"
+                onClick={() => window.open('https://github.com', '_blank')}
               >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
@@ -67,11 +70,11 @@ const Contact = () => {
               <div className="grid sm:grid-cols-3 gap-4 text-sm">
                 <div>
                   <p className="text-gray-700 font-medium mb-1">Location</p>
-                  <p className="text-gray-500">San Francisco Bay Area</p>
+                  <p className="text-gray-500">München, Germany</p>
                 </div>
                 <div>
-                  <p className="text-gray-700 font-medium mb-1">Availability</p>
-                  <p className="text-gray-500">Available for new opportunities</p>
+                  <p className="text-gray-700 font-medium mb-1">Phone</p>
+                  <p className="text-gray-500">+49(0)17656955718</p>
                 </div>
                 <div>
                   <p className="text-gray-700 font-medium mb-1">Response Time</p>
@@ -84,7 +87,7 @@ const Contact = () => {
 
         <div className="text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 AI Engineer Portfolio
+            © 2024 Maximilian Weissenbacher - AI Engineer
           </p>
         </div>
       </div>

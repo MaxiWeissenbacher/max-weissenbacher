@@ -7,36 +7,52 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered Code Review Assistant",
-      description: "Intelligent system that automatically reviews code, suggests improvements, and detects potential bugs using advanced NLP and static analysis.",
-      technologies: ["Python", "OpenAI GPT-4", "FastAPI", "React", "Docker"],
+      title: "Legal Impact Assessment Tool",
+      description: "GenAI tool for German government agencies (BMF, ITZBund) that analyzes legal documents and provides impact assessments, achieving 60% time savings in legal analysis workflows.",
+      technologies: ["Python", "LLMs", "FastAPI", "Docker", "Legal NLP"],
       github: "#",
       demo: "#",
       status: "Production"
     },
     {
-      title: "Neural Style Transfer Platform",
-      description: "Web application that applies artistic styles to images using convolutional neural networks, with real-time processing capabilities.",
-      technologies: ["PyTorch", "Flask", "JavaScript", "AWS S3", "Redis"],
+      title: "Multimodal Confluence Chatbot",
+      description: "AI-powered chatbot for document search and knowledge management, increasing team productivity by 25%. Awarded 2nd place at PwC Best of Consulting competition.",
+      technologies: ["Python", "LangChain", "RAG", "Confluence API", "React"],
+      github: "#",
+      demo: "#",
+      status: "Production"
+    },
+    {
+      title: "GraphRAG Legal Modularization",
+      description: "Advanced application combining semantic knowledge graphs with Retrieval-Augmented Generation for legal document modularization and analysis.",
+      technologies: ["GraphRAG", "Neo4j", "Python", "Transformers", "Legal Tech"],
       github: "#",
       demo: "#",
       status: "Active Development"
     },
     {
-      title: "Predictive Maintenance System",
-      description: "IoT-based machine learning system that predicts equipment failures before they occur, reducing downtime by 45%.",
-      technologies: ["Python", "TensorFlow", "Apache Kafka", "PostgreSQL"],
+      title: "Hate Speech Detection System",
+      description: "Ensemble model achieving 0.94 F1-Macro score for hate speech detection in political discourse. Processed 2.7M tweets with custom annotation tools.",
+      technologies: ["BERT", "Ensemble Methods", "Streamlit", "AWS", "Python"],
       github: "#",
-      demo: "#",
-      status: "Production"
+      demo: "https://medium.com",
+      status: "Published"
     },
     {
-      title: "Multi-Language Document Chat",
-      description: "RAG-based chatbot that understands and answers questions about documents in multiple languages using vector embeddings.",
-      technologies: ["LangChain", "Pinecone", "OpenAI", "Streamlit"],
+      title: "Car Price Prediction",
+      description: "Machine learning project combining web scraping and predictive modeling to forecast car prices using comprehensive market data analysis.",
+      technologies: ["R", "Web Scraping", "Machine Learning", "Data Analysis"],
       github: "#",
       demo: "#",
-      status: "Beta"
+      status: "Completed"
+    },
+    {
+      title: "Fake Trump Tweet Generator",
+      description: "NLP project using clustering and word embeddings to generate realistic social media content, deployed on AWS infrastructure.",
+      technologies: ["Python", "AWS", "KMeans", "GloVe", "PCA", "NLP"],
+      github: "#",
+      demo: "#",
+      status: "Completed"
     }
   ];
 
@@ -49,7 +65,7 @@ const Projects = () => {
           </h2>
           <div className="w-16 h-px bg-gray-400 mx-auto mb-6 shadow-soft"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance">
-            Innovative AI solutions that solve real-world problems
+            AI solutions spanning government tech, research, and practical applications
           </p>
         </div>
 

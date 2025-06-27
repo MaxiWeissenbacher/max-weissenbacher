@@ -6,46 +6,75 @@ import { Briefcase } from "lucide-react";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior AI Engineer",
-      company: "TechCorp Innovation Labs",
+      title: "AI Engineer",
+      company: "PwC Germany",
       period: "2023 - Present",
-      location: "San Francisco, CA",
-      description: "Leading AI initiatives and developing next-generation machine learning solutions for enterprise clients.",
+      location: "München, Germany",
+      description: "Leading LLM deployments and developing GenAI tools for German government agencies on secure infrastructure.",
       achievements: [
-        "Developed and deployed 5+ production ML models serving 1M+ users daily",
-        "Led a team of 4 engineers in building an AI-powered recommendation system",
-        "Improved model performance by 40% through advanced optimization techniques",
-        "Implemented MLOps pipeline reducing deployment time by 60%"
+        "Deployed secure LLM models (Mistral, Gemma) on government infrastructure",
+        "Developed Legal Impact Assessment Tool achieving 60% time savings in legal analysis",
+        "Built multimodal Confluence chatbot increasing productivity by 25% (2nd place Best of Consulting)",
+        "Created GraphRAG application for legal modularization using semantic knowledge graphs",
+        "Implemented time series forecasting (XGBoost) for Munich public transport passenger predictions"
       ],
-      technologies: ["Python", "TensorFlow", "AWS", "Docker", "Kubernetes", "MLflow"]
+      technologies: ["Python", "LLMs", "Mistral", "Gemma", "GraphRAG", "XGBoost", "FastAPI", "Docker"]
     },
     {
-      title: "Machine Learning Engineer",
-      company: "DataDriven Solutions",
-      period: "2021 - 2023",
-      location: "New York, NY",
-      description: "Built and maintained ML infrastructure and developed predictive models for various business applications.",
+      title: "Research Assistant (ML)",
+      company: "University of Regensburg",
+      period: "2023",
+      location: "Regensburg, Germany",
+      description: "Conducted ML research on early detection of depression in adolescents using advanced NLP techniques.",
       achievements: [
-        "Created automated data pipeline processing 10TB+ daily",
-        "Developed NLP models for sentiment analysis with 95% accuracy",
-        "Reduced model training time by 50% through distributed computing",
-        "Mentored 3 junior developers in ML best practices"
+        "Developed depression detection models using BERT, GPT-3, and ChatGPT",
+        "Applied text classification and data augmentation techniques",
+        "Implemented prompt engineering strategies for improved model performance",
+        "Published research findings in Frontiers in Psychiatry"
       ],
-      technologies: ["PyTorch", "Apache Spark", "PostgreSQL", "Redis", "FastAPI"]
+      technologies: ["BERT", "GPT-3", "ChatGPT", "Python", "NLP", "PyTorch", "Transformers"]
     },
     {
-      title: "Data Scientist",
-      company: "Analytics Pro",
-      period: "2019 - 2021",
-      location: "Boston, MA",
-      description: "Analyzed complex datasets and built predictive models to drive business intelligence and decision-making.",
+      title: "Data Science Intern",
+      company: "Amazon UK",
+      period: "2022",
+      location: "London, UK",
+      description: "Developed forecasting models for inventory management at carrier level using multivariate time series analysis.",
       achievements: [
-        "Built customer churn prediction model saving $2M annually",
-        "Designed A/B testing framework used across 20+ experiments",
-        "Created interactive dashboards for C-level executives",
-        "Published 3 research papers on applied machine learning"
+        "Built predictive models for goods receipt forecasting at carrier level",
+        "Achieved +6.6% accuracy improvement for WK+1 forecasts and +7.73% for intraweek predictions",
+        "Implemented models using LightGBM, FbProphet, and DeepAR",
+        "Generated potential savings in seven-figure GBP range"
       ],
-      technologies: ["R", "Python", "Tableau", "SQL", "Scikit-learn", "Jupyter"]
+      technologies: ["Python", "LightGBM", "FbProphet", "DeepAR", "Time Series Analysis", "AWS"]
+    },
+    {
+      title: "Working Student Data Analytics",
+      company: "SAP",
+      period: "2021 - 2022",
+      location: "München, Germany",
+      description: "Analyzed performance of SAP Learning Platform and developed automated forecasting solutions.",
+      achievements: [
+        "Performed comprehensive performance analysis of SAP Learning Platform",
+        "Developed forecasting and automation solutions using Python",
+        "Created data-driven insights for platform optimization",
+        "Contributed to openSAP video content"
+      ],
+      technologies: ["Python", "Data Analytics", "Forecasting", "SAP", "Automation"]
+    },
+    {
+      title: "Oracle APEX Intern",
+      company: "BMW",
+      period: "2019 - 2020",
+      location: "Regensburg, Germany",
+      description: "Developed and enhanced Oracle APEX system for order management with rollout to BMW plants in the UK.",
+      achievements: [
+        "Enhanced Oracle APEX system for order management",
+        "Developed features using SQL, PL/SQL, and JavaScript",
+        "Successfully rolled out system to BMW plants in the UK",
+        "Improved order processing efficiency through system optimization"
+      ],
+      technologies: ["Oracle APEX", "SQL", "PL/SQL", "JavaScript", "Database Design"]
     }
   ];
 
