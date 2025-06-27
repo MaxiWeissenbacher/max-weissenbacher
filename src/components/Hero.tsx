@@ -1,3 +1,4 @@
+
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -29,12 +30,15 @@ const Hero = () => {
       <div className="text-center max-w-4xl mx-auto">
         {/* Modern Profile Image */}
         <div className="relative mb-8 group">
-          <div className="w-32 h-32 lg:w-40 lg:h-40 mx-auto relative">
+          <div className="w-40 h-40 lg:w-48 lg:h-48 mx-auto relative">
             {/* Animated background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-20 shadow-glow"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-xl animate-pulse opacity-10 shadow-glow"></div>
+            
+            {/* Subtle border glow effect */}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 blur-sm transform rotate-1"></div>
             
             {/* Main image container */}
-            <div className="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border-4 border-white transform transition-all duration-300 hover:scale-105 shadow-hover">
+            <div className="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border-2 border-white/50 transform transition-all duration-300 hover:scale-105 shadow-hover">
               <img 
                 src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
                 alt="Maximilian Weissenbacher" 
@@ -42,12 +46,14 @@ const Hero = () => {
               />
               
               {/* Subtle overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
             </div>
             
-            {/* Floating accent elements */}
-            <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full opacity-70 animate-bounce shadow-modern"></div>
-            <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-500 rounded-full opacity-70 animate-bounce shadow-modern" style={{ animationDelay: '0.5s' }}></div>
+            {/* Modern corner accent lines */}
+            <div className="absolute top-0 left-0 w-6 h-6 border-l-2 border-t-2 border-blue-400/40 rounded-tl-xl transform -translate-x-1 -translate-y-1"></div>
+            <div className="absolute top-0 right-0 w-6 h-6 border-r-2 border-t-2 border-purple-400/40 rounded-tr-xl transform translate-x-1 -translate-y-1"></div>
+            <div className="absolute bottom-0 left-0 w-6 h-6 border-l-2 border-b-2 border-pink-400/40 rounded-bl-xl transform -translate-x-1 translate-y-1"></div>
+            <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-blue-400/40 rounded-br-xl transform translate-x-1 translate-y-1"></div>
           </div>
         </div>
         
