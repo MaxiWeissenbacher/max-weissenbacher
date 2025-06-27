@@ -28,19 +28,29 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center container-padding relative">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Clean Profile Image */}
+        {/* Framed Profile Image with Cool Shadow */}
         <div className="relative mb-8 group">
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto relative">
-            {/* Main image container with rounded rectangle */}
-            <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border border-gray-200/50 transform transition-all duration-300 hover:scale-105 shadow-hover">
-              <img 
-                src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
-                alt="Maximilian Weissenbacher" 
-                className="w-full h-full object-cover"
-              />
+            {/* Outer frame shadow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-400/30 via-gray-300/20 to-slate-500/30 rounded-3xl transform rotate-1 blur-sm scale-105"></div>
+            <div className="absolute inset-0 bg-gradient-to-tl from-slate-300/20 via-gray-200/15 to-slate-400/25 rounded-3xl transform -rotate-1 blur-md scale-110"></div>
+            
+            {/* Main frame container */}
+            <div className="relative w-full h-full p-3 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/50">
+              {/* Inner image container */}
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border-2 border-gray-200/80">
+                <img 
+                  src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
+                  alt="Maximilian Weissenbacher" 
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              </div>
               
-              {/* Subtle overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+              {/* Frame highlight */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/40 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
