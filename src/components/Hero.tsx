@@ -51,10 +51,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center container-padding relative">
+    <section className="min-h-screen flex items-center justify-center container-padding relative pt-24">
       <div className="text-center max-w-4xl mx-auto">
         {/* Framed Profile Image with Cool Shadow */}
-        <div className="relative mb-8 group">
+        <div className="relative mb-12 group">
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto relative">
             {/* Outer frame shadow */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-400/20 via-gray-300/15 to-slate-500/20 rounded-3xl transform rotate-1 blur-sm scale-105"></div>
@@ -67,7 +67,7 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
                   alt="Maximilian Weissenbacher" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
                 
                 {/* Subtle overlay */}
