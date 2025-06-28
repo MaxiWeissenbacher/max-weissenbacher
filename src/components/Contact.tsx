@@ -9,7 +9,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="section-spacing bg-gray-50/50">
+    <section className="section-spacing">
       <div className="max-w-4xl mx-auto container-padding text-center">
         <div className="mb-16">
           <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight">

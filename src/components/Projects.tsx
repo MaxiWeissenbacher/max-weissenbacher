@@ -75,18 +75,6 @@ const Projects = () => {
                     <CardTitle className="text-gray-900 text-xl font-medium mb-2">
                       {project.title}
                     </CardTitle>
-                    <Badge 
-                      variant="secondary"
-                      className={`text-xs font-normal shadow-soft ${
-                        project.status === 'Production' 
-                          ? 'bg-green-50 text-green-700 border-green-200' 
-                          : project.status === 'Beta'
-                          ? 'bg-blue-50 text-blue-700 border-blue-200'
-                          : 'bg-yellow-50 text-yellow-700 border-yellow-200'
-                      }`}
-                    >
-                      {project.status}
-                    </Badge>
                   </div>
                   <div className="flex gap-2">
                     <Button 

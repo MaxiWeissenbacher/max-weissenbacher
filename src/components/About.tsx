@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section id="about" className="section-spacing bg-gradient-to-b from-gray-50/50 to-white">
+    <section id="about" className="section-spacing">
       <div className="max-w-4xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight drop-shadow-sm">

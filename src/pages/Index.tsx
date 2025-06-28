@@ -12,25 +12,25 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <section id="hero">
+      <section id="hero" className="bg-white">
         <Hero />
       </section>
-      <section id="about">
+      <section id="about" className="bg-gray-50/30">
         <About />
       </section>
-      <section id="experience">
+      <section id="experience" className="bg-white">
         <Experience />
       </section>
-      <section id="publications">
+      <section id="publications" className="bg-gray-50/40">
         <Publications />
       </section>
-      <section id="projects">
+      <section id="projects" className="bg-white">
         <Projects />
       </section>
-      <section id="education">
+      <section id="education" className="bg-gray-50/50">
         <Education />
       </section>
-      <section id="contact">
+      <section id="contact" className="bg-gray-50/60">
         <Contact />
       </section>
     </div>
