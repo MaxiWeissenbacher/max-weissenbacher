@@ -60,10 +60,10 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-400/20 via-gray-300/15 to-slate-500/20 rounded-3xl transform rotate-1 blur-sm scale-105"></div>
             <div className="absolute inset-0 bg-gradient-to-tl from-slate-300/15 via-gray-200/10 to-slate-400/15 rounded-3xl transform -rotate-1 blur-md scale-110"></div>
             
-            {/* Main frame container */}
-            <div className="relative w-full h-full p-1 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/50">
+            {/* Main frame container - made thinner */}
+            <div className="relative w-full h-full p-0.5 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/40">
               {/* Inner image container */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border border-gray-200/50">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border border-gray-200/30">
                 <img 
                   src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png" 
                   alt="Maximilian Weissenbacher" 
@@ -75,26 +75,21 @@ const Hero = () => {
               </div>
               
               {/* Frame highlight */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/30 via-transparent to-transparent pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
         
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-3 tracking-tight min-h-[1.2em] drop-shadow-sm">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-6 tracking-tight min-h-[1.2em] drop-shadow-sm">
           {displayedName}
           <span className="animate-pulse">|</span>
         </h1>
         
-        <p className="text-lg text-gray-600 mb-4 font-light">
+        <p className="text-xl lg:text-2xl text-gray-600 mb-8 font-light">
           Welcome to my portfolio
         </p>
         
         <div className="w-16 h-px bg-gray-400 mx-auto mb-8 shadow-soft"></div>
-        
-        <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto text-balance drop-shadow-sm">
-          AI Engineer @ PwC Germany, specializing in LLM deployments and GenAI solutions 
-          for government agencies. Passionate about NLP, machine learning, and applied AI research.
-        </p>
         
         <div className="flex justify-center mb-12">
           <Button 
