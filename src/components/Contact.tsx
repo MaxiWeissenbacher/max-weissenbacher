@@ -25,7 +25,7 @@ const Contact = () => {
           <CardHeader className="pb-6">
             <CardTitle className="text-gray-900 text-xl font-medium">Get In Touch</CardTitle>
             <CardDescription className="text-gray-600">
-              Available for opportunities and collaboration
+            If you have questions or would like to collaborate? I'd be happy to connect.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-8">
@@ -48,25 +48,6 @@ const Contact = () => {
               >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
-              </Button>
-              
-              <Button 
-                variant="outline"
-                className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
-                size="lg"
-                onClick={() => window.open('https://github.com/MaxiWeissenbacher', '_blank')}
-              >
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
-              
-              <Button 
-                variant="outline"
-                className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
-                size="lg"
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                Resume
               </Button>
             </div>
 

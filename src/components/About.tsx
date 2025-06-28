@@ -53,6 +53,14 @@ const About = () => {
           <Button 
             variant="outline" 
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
+            onClick={() => window.open('https://ollama.com/maxiweissenbacher', '_blank')}
+          >
+            <BookOpen className="w-4 h-4 mr-2" />
+            Ollama
+          </Button>
+          <Button 
+            variant="outline" 
+            className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
             onClick={() => window.open('https://medium.com/@maxiweisei/create-a-text-annotation-app-for-text-classification-using-streamlit-9577de9a42a0', '_blank')}
           >
             <Mail className="w-4 h-4 mr-2" />
