@@ -11,11 +11,17 @@ const About = () => {
             About Me
           </h2>
           <div className="w-16 h-px bg-gray-400 mx-auto mb-6 shadow-soft"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance leading-relaxed mb-6">
+            I'm an AI Engineer at PwC Germany, where I specialize in deploying secure LLM solutions 
+            for government agencies and developing GenAI tools for German ministries. My work focuses 
+            on creating production-ready AI applications that solve real-world problems while ensuring 
+            the highest security standards.
+          </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance leading-relaxed">
-            I'm an AI Engineer at PwC Germany, specializing in deploying secure LLM solutions for government agencies. 
             With a Master's in Information Science and experience across tech giants like Amazon and SAP, 
-            I focus on creating impactful AI systems that solve real-world problems. My expertise spans NLP, 
-            machine learning research, and building production-ready AI applications.
+            I bring expertise in NLP, machine learning research, and building impactful AI systems. 
+            My passion lies in bridging the gap between cutting-edge AI research and practical applications 
+            that make a difference.
           </p>
         </div>
 

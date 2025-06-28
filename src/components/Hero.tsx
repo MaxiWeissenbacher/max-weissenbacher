@@ -1,28 +1,53 @@
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [displayedName, setDisplayedName] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
   const fullName = "Maximilian Weissenbacher";
   
   useEffect(() => {
-    let index = 0;
+    let index = displayedName.length;
+    
     const timer = setInterval(() => {
-      if (index < fullName.length) {
-        setDisplayedName(fullName.slice(0, index + 1));
-        index++;
+      if (!isDeleting) {
+        // Typing forward
+        if (index < fullName.length) {
+          setDisplayedName(fullName.slice(0, index + 1));
+          index++;
+        } else {
+          // Wait a bit then start deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
       } else {
-        clearInterval(timer);
+        // Deleting backward
+        if (index > 0) {
+          setDisplayedName(fullName.slice(0, index - 1));
+          index--;
+        } else {
+          // Start typing again
+          setIsDeleting(false);
+        }
       }
-    }, 100);
+    }, isDeleting ? 50 : 100);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isDeleting, displayedName.length]);
 
   const scrollToSection = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const downloadResume = () => {
+    // Create a temporary link to download the resume
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume PDF to the public folder
+    link.download = 'Maximilian_Weissenbacher_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -36,7 +61,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-tl from-slate-300/15 via-gray-200/10 to-slate-400/15 rounded-3xl transform -rotate-1 blur-md scale-110"></div>
             
             {/* Main frame container */}
-            <div className="relative w-full h-full p-1.5 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/50">
+            <div className="relative w-full h-full p-1 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/50">
               {/* Inner image container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border border-gray-200/50">
                 <img 
@@ -55,18 +80,31 @@ const Hero = () => {
           </div>
         </div>
         
-        
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extralight text-gray-900 mb-3 tracking-tight min-h-[1.2em] drop-shadow-sm">
           {displayedName}
           <span className="animate-pulse">|</span>
         </h1>
         
+        <p className="text-lg text-gray-600 mb-4 font-light">
+          Welcome to my portfolio
+        </p>
+        
         <div className="w-16 h-px bg-gray-400 mx-auto mb-8 shadow-soft"></div>
         
-        <p className="text-lg lg:text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl mx-auto text-balance drop-shadow-sm">
+        <p className="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto text-balance drop-shadow-sm">
           AI Engineer @ PwC Germany, specializing in LLM deployments and GenAI solutions 
           for government agencies. Passionate about NLP, machine learning, and applied AI research.
         </p>
+        
+        <div className="flex justify-center mb-12">
+          <Button 
+            onClick={downloadResume}
+            className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
+          >
+            <Download className="w-4 h-4 mr-2" />
+            Download Resume
+          </Button>
+        </div>
       </div>
       
       {/* Scroll Indicator */}
