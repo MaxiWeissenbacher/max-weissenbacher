@@ -77,7 +77,7 @@ const Publications = () => {
                       {pub.authors}
                     </CardDescription>
                     <p className="text-sm text-gray-500">
-                      {pub.journal} • {pub.year} • {pub.citations} citations
+                      {pub.journal} • {pub.year}{pub.citations && pub.citations > 0 ? ` • ${pub.citations} citations` : ''}
                     </p>
                   </div>
                   <Button 
