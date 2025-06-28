@@ -39,22 +39,12 @@ const Contact = () => {
                 <Mail className="w-4 h-4 mr-2" />
                 Email Me
               </Button>
-              
+                            
               <Button 
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
                 size="lg"
-                onClick={() => window.open('mailto:maxweissenbacher98@gmail.com', '_blank')}
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Direct Email
-              </Button>
-              
-              <Button 
-                variant="outline"
-                className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
-                size="lg"
-                onClick={() => window.open('https://linkedin.com', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/maximilian-weissenbacher/', '_blank')}
               >
                 <Linkedin className="w-4 h-4 mr-2" />
                 LinkedIn
@@ -64,7 +54,7 @@ const Contact = () => {
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
                 size="lg"
-                onClick={() => window.open('https://github.com', '_blank')}
+                onClick={() => window.open('https://github.com/MaxiWeissenbacher', '_blank')}
               >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub

@@ -14,11 +14,11 @@ const Experience = () => {
       achievements: [
         "Deployed secure LLM models (Mistral, Gemma) on government infrastructure",
         "Developed Legal Impact Assessment Tool achieving 60% time savings in legal analysis",
-        "Built multimodal Confluence chatbot increasing productivity by 25% (2nd place Best of Consulting)",
+        "Built multimodal Confluence chatbot increasing productivity by 25% (2nd place Best of Consulting Award)",
         "Created GraphRAG application for legal modularization using semantic knowledge graphs",
         "Implemented time series forecasting (XGBoost) for Munich public transport passenger predictions"
       ],
-      technologies: ["Python", "LLMs", "Mistral", "Gemma", "GraphRAG", "XGBoost", "FastAPI", "Docker"]
+      technologies: ["Python", "MCP", "LLMs", "Langgraph", "Ollama", "GraphRAG", "Langfuse", "FastAPI", "Docker", "Azure", "GCP"]
     },
     {
       title: "Research Assistant (ML)",
@@ -46,7 +46,7 @@ const Experience = () => {
         "Implemented models using LightGBM, FbProphet, and DeepAR",
         "Generated potential savings in seven-figure GBP range"
       ],
-      technologies: ["Python", "LightGBM", "FbProphet", "DeepAR", "Time Series Analysis", "AWS"]
+      technologies: ["Python", "LightGBM", "FbProphet", "DeepAR", "Time Series Analysis", "AWS", "Sagemaker"]
     },
     {
       title: "Working Student Data Analytics",

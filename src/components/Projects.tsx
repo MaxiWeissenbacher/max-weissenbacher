@@ -9,10 +9,9 @@ const Projects = () => {
     {
       title: "Legal Impact Assessment Tool",
       description: "GenAI tool for German government agencies (BMF, ITZBund) that analyzes legal documents and provides impact assessments, achieving 60% time savings in legal analysis workflows.",
-      technologies: ["Python", "LLMs", "FastAPI", "Docker", "Legal NLP"],
-      github: "#",
+      technologies: ["Python", "LLMs", "FastAPI", "Docker", "Neo4J", "Legal NLP"],
+      github: "https://gitlab.opencode.de/iorb/elexa",
       demo: "#",
-      status: "Production"
     },
     {
       title: "Multimodal Confluence Chatbot",
@@ -20,7 +19,6 @@ const Projects = () => {
       technologies: ["Python", "LangChain", "RAG", "Confluence API", "React"],
       github: "#",
       demo: "#",
-      status: "Production"
     },
     {
       title: "GraphRAG Legal Modularization",
@@ -28,7 +26,6 @@ const Projects = () => {
       technologies: ["GraphRAG", "Neo4j", "Python", "Transformers", "Legal Tech"],
       github: "#",
       demo: "#",
-      status: "Active Development"
     },
     {
       title: "Hate Speech Detection System",
@@ -36,7 +33,6 @@ const Projects = () => {
       technologies: ["BERT", "Ensemble Methods", "Streamlit", "AWS", "Python"],
       github: "#",
       demo: "https://medium.com",
-      status: "Published"
     },
     {
       title: "Car Price Prediction",
@@ -44,7 +40,6 @@ const Projects = () => {
       technologies: ["R", "Web Scraping", "Machine Learning", "Data Analysis"],
       github: "#",
       demo: "#",
-      status: "Completed"
     },
     {
       title: "Fake Trump Tweet Generator",
@@ -52,7 +47,6 @@ const Projects = () => {
       technologies: ["Python", "AWS", "KMeans", "GloVe", "PCA", "NLP"],
       github: "#",
       demo: "#",
-      status: "Completed"
     }
   ];
 

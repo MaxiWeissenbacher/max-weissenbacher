@@ -10,7 +10,6 @@ const Publications = () => {
       authors: "M. Weissenbacher, et al.",
       journal: "Frontiers in Psychiatry",
       year: "2024",
-      citations: 8,
       abstract: "Language-based analysis using ChatGPT, BERT, and GPT-3 for early detection of depression in adolescents through clinical interview analysis."
     },
     {
@@ -18,7 +17,6 @@ const Publications = () => {
       authors: "M. Weissenbacher, et al.",
       journal: "LREC-COLING 2024 (TRAC Workshop)",
       year: "2024",
-      citations: 12,
       abstract: "Ensemble models achieving 0.94 F1-Macro score for hate speech detection. Analysis of 2.7 million tweets with custom annotation tools built in Streamlit and AWS."
     },
     {
@@ -26,7 +24,7 @@ const Publications = () => {
       authors: "M. Weissenbacher, et al.",
       journal: "KONVENS 2023",
       year: "2023",
-      citations: 15,
+      citations: 1,
       abstract: "Fine-tuning BERT and XLM-RoBERTa models with data augmentation using Large Language Models for improved performance in resource-constrained language settings."
     },
     {
@@ -56,7 +54,7 @@ const Publications = () => {
           <Button 
             variant="outline"
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"
-            onClick={() => window.open('https://scholar.google.com', '_blank')}
+            onClick={() => window.open('https://scholar.google.de/citations?user=jb_UqygAAAAJ&hl=de&oi=ao&gmla=ABEO0YoluFz7DkMdJzQT_oHY0pXAIzR-Hpf8IxeVjPKH1MAgxPAOQCBwg6cE3VR-y8_ChitU6lmkCXaEbqD2yJA5IIh51x9Sz3WLKEUiuXkenGJ4WFHb1LzzyBzrNw&sciund=10376037668772683050', '_blank')}
           >
             <BookOpen className="w-4 h-4 mr-2" />
             View on Google Scholar

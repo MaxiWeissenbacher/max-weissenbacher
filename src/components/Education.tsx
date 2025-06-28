@@ -16,7 +16,7 @@ const Education = () => {
         "Natural Language Engineering",
         "Machine Learning",
         "Deep Learning",
-        "Research Methods",
+        "Information Retrieval",
         "Advanced Statistics"
       ],
       achievements: [
@@ -47,35 +47,12 @@ const Education = () => {
         "Active participation in research projects"
       ]
     },
-    {
-      degree: "Abitur",
-      school: "Gymnasium LSH-Marquartstein",
-      period: "2016",
-      location: "Marquartstein, Germany",
-      gpa: "2.7",
-      relevant: [
-        "Mathematics",
-        "Computer Science",
-        "Physics",
-        "English",
-        "German",
-        "Economics"
-      ],
-      achievements: [
-        "Successfully completed German Abitur",
-        "Strong performance in STEM subjects",
-        "Prepared for university-level studies",
-        "Developed analytical and problem-solving skills"
-      ]
-    }
   ];
 
   const certifications = [
+    { name: "Generative AI with Large Language Models", issuer: "Coursera", year: "2023" },
+    { name: "Generative AI Fundamentals", issuer: "Google Cloud Skills Boost", year: "2023" },
     { name: "IT Advanced Training Certificate", issuer: "University of Regensburg", year: "2021" },
-    { name: "Data Science Specialization", issuer: "University Coursework", year: "2023" },
-    { name: "Machine Learning Research", issuer: "Academic Research", year: "2023" },
-    { name: "NLP with Python", issuer: "University Coursework", year: "2020" },
-    { name: "Advanced Analytics", issuer: "Professional Development", year: "2023" }
   ];
 
   return (

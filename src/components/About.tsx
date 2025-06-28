@@ -18,8 +18,8 @@ const About = () => {
             the highest security standards.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-balance leading-relaxed">
-            With a Master's in Information Science and experience across tech giants like Amazon and SAP, 
-            I bring expertise in NLP, machine learning research, and building impactful AI systems. 
+            With a Master's in Information Science and experience across tech companies like Amazon and SAP, 
+            I bring expertise in NLP, machine learning, information retrieval, and building impactful AI systems. 
             My passion lies in bridging the gap between cutting-edge AI research and practical applications 
             that make a difference.
           </p>
@@ -29,7 +29,7 @@ const About = () => {
           <Button 
             variant="outline" 
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
-            onClick={() => window.open('https://linkedin.com', '_blank')}
+            onClick={() => window.open('https://www.linkedin.com/in/maximilian-weissenbacher/', '_blank')}
           >
             <Linkedin className="w-4 h-4 mr-2" />
             LinkedIn
@@ -37,7 +37,7 @@ const About = () => {
           <Button 
             variant="outline" 
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
-            onClick={() => window.open('https://github.com', '_blank')}
+            onClick={() => window.open('https://github.com/MaxiWeissenbacher', '_blank')}
           >
             <Github className="w-4 h-4 mr-2" />
             GitHub
@@ -45,7 +45,7 @@ const About = () => {
           <Button 
             variant="outline" 
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
-            onClick={() => window.open('https://huggingface.co', '_blank')}
+            onClick={() => window.open('https://huggingface.co/mox', '_blank')}
           >
             <BookOpen className="w-4 h-4 mr-2" />
             HuggingFace
@@ -53,7 +53,7 @@ const About = () => {
           <Button 
             variant="outline" 
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
-            onClick={() => window.open('https://medium.com', '_blank')}
+            onClick={() => window.open('https://medium.com/@maxiweisei/create-a-text-annotation-app-for-text-classification-using-streamlit-9577de9a42a0', '_blank')}
           >
             <Mail className="w-4 h-4 mr-2" />
             Medium
