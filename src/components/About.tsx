@@ -1,11 +1,10 @@
 
 import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
-import { Ollama } from "@lobehub/icons";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section id="about" className="section-spacing">
+    <section id="about" className="section-spacing bg-gray-50/30">
       <div className="max-w-4xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-light text-gray-900 mb-4 tracking-tight drop-shadow-sm">
@@ -56,7 +55,7 @@ const About = () => {
             className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 px-6 py-2.5 text-sm font-normal transition-all duration-200 shadow-modern shadow-hover"
             onClick={() => window.open('https://ollama.com/maxiweissenbacher', '_blank')}
           >
-            <Ollama className="w-4 h-4 mr-2" />
+            <div className="w-4 h-4 mr-2 bg-gray-700 rounded text-white text-xs flex items-center justify-center font-bold">O</div>
             Ollama
           </Button>
           <Button 
