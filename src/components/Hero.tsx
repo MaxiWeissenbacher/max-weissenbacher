@@ -1,5 +1,4 @@
 
-
 import { ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -7,6 +6,8 @@ import { useEffect, useState } from "react";
 const Hero = () => {
   const [displayedName, setDisplayedName] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const fullName = "Maximilian Weissenbacher";
   
   useEffect(() => {
@@ -51,41 +52,49 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
+  const handleImageLoad = () => {
+    console.log('Image loaded successfully');
+    setImageLoaded(true);
+    setImageError(false);
+  };
+
+  const handleImageError = () => {
+    console.error('Image failed to load');
+    setImageError(true);
+    setImageLoaded(false);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center container-padding relative pt-24">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Framed Profile Image with Cool Shadow */}
+        {/* Simplified Profile Image with Elegant Frame */}
         <div className="relative mb-12 group">
-          <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto relative">
-            {/* Outer frame shadow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-400/20 via-gray-300/15 to-slate-500/20 rounded-3xl transform rotate-1 blur-sm scale-105"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-slate-300/15 via-gray-200/10 to-slate-400/15 rounded-3xl transform -rotate-1 blur-md scale-110"></div>
-            
-            {/* Main frame container - made thinner */}
-            <div className="relative w-full h-full p-0.5 bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/40">
-              {/* Inner image container */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border border-gray-200/30">
-                <img 
-                  src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
-                  alt="Maximilian Weissenbacher" 
-                  className="w-full h-full object-cover object-center"
-                  onLoad={() => console.log('Image loaded successfully')}
-                  onError={(e) => {
-                    console.error('Primary image failed to load, trying fallback');
-                    const target = e.target as HTMLImageElement;
-                    target.src = "/maxiwei-high-res-current-photo.jpeg.jpg";
-                    target.onerror = () => {
-                      console.error('Both images failed to load');
-                    };
-                  }}
-                />
-                
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/3 to-transparent"></div>
-              </div>
+          <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto">
+            {/* Simple elegant frame */}
+            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/40">
+              {!imageLoaded && !imageError && (
+                <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+                  <span className="text-gray-400">Loading...</span>
+                </div>
+              )}
               
-              {/* Frame highlight */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 via-transparent to-transparent pointer-events-none"></div>
+              {imageError && (
+                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-400">Image not found</span>
+                </div>
+              )}
+              
+              <img 
+                src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
+                alt="Maximilian Weissenbacher" 
+                className="w-full h-full object-cover object-center"
+                onLoad={handleImageLoad}
+                onError={handleImageError}
+                style={{ display: imageError ? 'none' : 'block' }}
+              />
+              
+              {/* Subtle overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -128,4 +137,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
