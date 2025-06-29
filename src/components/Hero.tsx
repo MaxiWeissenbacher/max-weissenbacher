@@ -1,4 +1,5 @@
 
+
 import { ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -65,13 +66,17 @@ const Hero = () => {
               {/* Inner image container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-inner border border-gray-200/30">
                 <img 
-                  src="/maxiwei-high-res-current-photo.jpeg.jpg"
+                  src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
                   alt="Maximilian Weissenbacher" 
                   className="w-full h-full object-cover object-center"
+                  onLoad={() => console.log('Image loaded successfully')}
                   onError={(e) => {
-                    console.error('Image failed to load, trying fallback');
+                    console.error('Primary image failed to load, trying fallback');
                     const target = e.target as HTMLImageElement;
-                    target.src = "/lovable-uploads/455c2fe9-cb04-43bd-895f-6f7e60766cfc.png";
+                    target.src = "/maxiwei-high-res-current-photo.jpeg.jpg";
+                    target.onerror = () => {
+                      console.error('Both images failed to load');
+                    };
                   }}
                 />
                 
@@ -123,3 +128,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
