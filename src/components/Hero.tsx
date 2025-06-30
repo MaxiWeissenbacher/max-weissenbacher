@@ -58,7 +58,7 @@ const Hero = () => {
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto">
             <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-shadow duration-300 hover:shadow-3xl group">
               <img 
-                src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
+                src="./lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
                 alt="Maximilian Weissenbacher" 
                 className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 loading="eager"
