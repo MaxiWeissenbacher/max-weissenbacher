@@ -26,8 +26,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: "/max-weissenbacher/", // 👈 ADD THIS LINE
+export default defineConfig(({ command, mode }) => ({
+  base: command === 'build' ? "/max-weissenbacher/" : "/",
   server: {
     host: "::",
     port: 8080,
