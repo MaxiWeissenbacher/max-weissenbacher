@@ -29,7 +29,7 @@ const Contact = () => {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-8">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            <div className="flex justify-center gap-3">
               <Button 
                 variant="outline"
                 className="border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-normal"

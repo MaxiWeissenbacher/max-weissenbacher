@@ -1,4 +1,3 @@
-
 import { ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -45,7 +44,7 @@ const Hero = () => {
   const downloadResume = () => {
     // Create a temporary link to download the resume
     const link = document.createElement('a');
-    link.href = '/cv_weissenbacher.pdf'; // You'll need to add your resume PDF to the public folder
+    link.href = '/cv_weissenbacher.pdf';
     link.download = 'Maximilian_Weissenbacher_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -71,7 +70,7 @@ const Hero = () => {
         <div className="relative mb-12">
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto">
             {/* Simple elegant frame */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl">
               {!imageLoaded && !imageError && (
                 <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
                   <span className="text-gray-400">Loading...</span>
