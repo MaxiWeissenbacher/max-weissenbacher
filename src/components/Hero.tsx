@@ -43,7 +43,7 @@ const Hero = () => {
   const downloadResume = () => {
     // Create a temporary link to download the resume
     const link = document.createElement('a');
-    link.href = '/cv_weissenbacher.pdf';
+    link.href = './cv_weissenbacher.pdf';
     link.download = 'Maximilian_Weissenbacher_Resume.pdf';
     document.body.appendChild(link);
     link.click();
