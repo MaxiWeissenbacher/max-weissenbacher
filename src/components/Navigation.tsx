@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -10,7 +11,6 @@ const Navigation = () => {
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
     { id: "publications", label: "Publications" },
-    { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
     { id: "contact", label: "Connect" }
   ];
@@ -46,9 +46,13 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-soft">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-medium text-gray-900">
+          <Button
+            variant="ghost"
+            onClick={() => scrollToSection("hero")}
+            className="font-medium text-gray-900 hover:text-gray-700 p-0 h-auto"
+          >
             Maximilian Weissenbacher
-          </div>
+          </Button>
           
           <div className="hidden md:flex items-center space-x-1">
             {sections.map((section) => (
@@ -68,11 +72,33 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <div className="md:hidden">
-            <Button variant="ghost" size="sm" className="text-gray-600">
-              Menu
-            </Button>
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm" className="text-gray-600">
+                  Menu
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <div className="flex flex-col space-y-4 mt-8">
+                  {sections.map((section) => (
+                    <Button
+                      key={section.id}
+                      variant="ghost"
+                      onClick={() => scrollToSection(section.id)}
+                      className={`justify-start text-left ${
+                        activeSection === section.id
+                          ? "text-gray-900 bg-gray-100"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      }`}
+                    >
+                      {section.label}
+                    </Button>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
