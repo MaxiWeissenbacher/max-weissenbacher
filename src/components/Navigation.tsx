@@ -72,7 +72,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu - Fixed to work properly */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -80,21 +80,22 @@ const Navigation = () => {
                   Menu
                 </Button>
               </SheetTrigger>
-              <SheetContent>
+              <SheetContent side="right" className="w-64">
                 <div className="flex flex-col space-y-4 mt-8">
                   {sections.map((section) => (
-                    <Button
-                      key={section.id}
-                      variant="ghost"
-                      onClick={() => scrollToSection(section.id)}
-                      className={`justify-start text-left ${
-                        activeSection === section.id
-                          ? "text-gray-900 bg-gray-100"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                      }`}
-                    >
-                      {section.label}
-                    </Button>
+                    <SheetTrigger key={section.id} asChild>
+                      <Button
+                        variant="ghost"
+                        onClick={() => scrollToSection(section.id)}
+                        className={`justify-start text-left w-full ${
+                          activeSection === section.id
+                            ? "text-gray-900 bg-gray-100"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        }`}
+                      >
+                        {section.label}
+                      </Button>
+                    </SheetTrigger>
                   ))}
                 </div>
               </SheetContent>

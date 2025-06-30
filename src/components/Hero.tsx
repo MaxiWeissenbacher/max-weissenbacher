@@ -53,20 +53,16 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center container-padding relative pt-24">
       <div className="text-center max-w-4xl mx-auto">
-        {/* Profile Image with Elegant Frame */}
-        <div className="relative mb-12">
+        {/* Profile Image - Completely rewritten to remove any flickering */}
+        <div className="mb-12">
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto">
-            {/* Simple elegant frame with subtle hover effect */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-shadow duration-300 hover:shadow-3xl">
+            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-shadow duration-300 hover:shadow-3xl group">
               <img 
                 src="/lovable-uploads/9bc65c0b-24ca-4cfc-b7fc-f7cabe4def2f.png"
                 alt="Maximilian Weissenbacher" 
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 loading="eager"
               />
-              
-              {/* Subtle overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
             </div>
           </div>
         </div>
