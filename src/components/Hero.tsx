@@ -68,10 +68,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center container-padding relative pt-24">
       <div className="text-center max-w-4xl mx-auto">
         {/* Simplified Profile Image with Elegant Frame */}
-        <div className="relative mb-12 group">
+        <div className="relative mb-12">
           <div className="w-48 h-56 lg:w-56 lg:h-64 mx-auto">
             {/* Simple elegant frame */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transform transition-all duration-300 hover:scale-105 hover:rotate-1 group-hover:shadow-slate-400/40">
+            <div className="relative w-full h-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl transition-all duration-300 hover:scale-105">
               {!imageLoaded && !imageError && (
                 <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
                   <span className="text-gray-400">Loading...</span>

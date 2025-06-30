@@ -24,11 +24,11 @@ const Index = () => {
       <section id="publications" className="bg-gray-50/40">
         <Publications />
       </section>
-      <section id="projects" className="bg-white">
-        <Projects />
-      </section>
-      <section id="education" className="bg-gray-50/50">
+      <section id="education" className="bg-white">
         <Education />
+      </section>
+      <section id="projects" className="bg-gray-50/50">
+        <Projects />
       </section>
       <section id="contact" className="bg-gray-50/60">
         <Contact />
