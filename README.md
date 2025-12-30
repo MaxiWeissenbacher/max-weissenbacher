@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Portfolio Maximilian Weissenbacher
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/dcb76b49-8ca2-4991-a272-48227682d374
+**URL**: https://maxiweissenbacher.github.io/max-weissenbacher/
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
