@@ -12,10 +12,10 @@ const Experience = () => {
       location: "München, Germany",
       description: "Leading LLM deployments and developing GenAI tools for German government agencies on secure infrastructure.",
       achievements: [
-        "Deployed secure LLM models (Mistral, Gemma) on government infrastructure",
-        "Developed Legal Impact Assessment Tool achieving 60% time savings in legal analysis",
-        "Built multimodal Confluence chatbot increasing productivity by 25% (2nd place Best of Consulting Award)",
-        "Created GraphRAG application for legal modularization using semantic knowledge graphs",
+        "First engineer and founding member of PwC's AI engineering practice for the German public sector; scaled the team from inception to 10+ engineers",
+        "Technical lead for data extraction in a multi-agent system automating energy infrastructure approvals (wind farms, gas pipelines), reducing legal review cycles from 3 years to 6 months; owned end-to-end OCR and document understanding pipelines forming the foundational data layer for a 50-person program",
+        "Designed and operated production LLM inference stacks (open-source models) with focus on reliability, performance, and strict security constraints",
+        "Led development of production GenAI applications:\n-	Document analysis tool: -60% decision latency\n-	Multimodal RAG chatbot: +25% productivity; awarded by Wirtschaftswoche 'Best of Consulting' prize\n-	GraphRAG system for legal entity disambiguation",
         "Implemented time series forecasting (XGBoost) for Munich public transport passenger predictions"
       ],
       technologies: ["Python", "MCP", "LLMs", "Langgraph", "Ollama", "GraphRAG", "Langfuse", "FastAPI", "Docker", "Azure", "GCP"]
