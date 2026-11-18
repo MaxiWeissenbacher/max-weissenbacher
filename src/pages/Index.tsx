@@ -1,4 +1,5 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, Download } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Download, X } from "lucide-react";
+import { useId, useRef } from "react";
 import "./portfolio.css";
 
 const base = import.meta.env.BASE_URL;
@@ -11,48 +12,58 @@ const projects = [
   {
     organization: "PLURAGO · Co-Founder & CTO",
     title: "AI-native property management",
-    description: "We’re building an AI-native property manager. I build the software that helps our team use company knowledge and automate operational workflows.",
-    link: "https://plurago.ai",
-    label: "Visit PLURAGO",
+    description: "Software for our own AI-native property management operations.",
+    detail: "As Co-Founder & CTO, I build the workflows that make company knowledge usable across daily operations. Our initial multi-agent platform included an MCP server, document extraction with page-level evidence, and regression evaluations.",
+    link: "https://plurago.ai/hausverwaltung",
+    label: "View PLURAGO property management",
   },
   {
     organization: "PLURAGO · AI Consulting",
     title: "AI adoption for real estate teams",
-    description: "I map workflows with customer teams, train staff on Claude, and build and deploy agents for selected tasks. Our initial platform included MCP, document extraction with page-level evidence, and regression evals.",
+    description: "Hands-on AI consulting and agent development for real estate teams.",
+    detail: "I map workflows with customer teams, train staff on Claude, and build and deploy agents for selected tasks. PLURAGO offers both team enablement and custom agents built in the client’s existing AI tools.",
+    link: "https://plurago.ai/en/ai-consulting",
+    label: "View PLURAGO AI Consulting",
   },
   {
     organization: "PwC · Stadt Landshut",
     title: "KI-lian",
-    description: "I independently built and deployed the city’s RAG chatbot on its own infrastructure and worked with city staff to evaluate answer quality.",
+    description: "A production RAG chatbot for the City of Landshut.",
+    detail: "I independently built and deployed KI-lian on the city’s own infrastructure. I worked with city staff to create a reference dataset and evaluate answer quality.",
     link: "https://app.landshut.de/embedded/kilian_website.html",
     label: "Try KI-lian",
   },
   {
     organization: "PwC · Public Sector",
     title: "SPARK Workflow",
-    description: "I led data extraction for an open-source multi-agent system for energy approvals. The overall workflow cut legal review cycles from three years to six months.",
+    description: "Open-source multi-agent workflow for energy infrastructure approvals.",
+    detail: "I led data extraction and built the data layer for the wider program. The overall workflow cut legal review cycles from three years to six months.",
     link: "https://opencode.de/de/software/spark-workflow-10117",
     label: "View open-source project",
   },
   {
     organization: "Amazon · London",
     title: "Fulfillment demand forecasting",
-    description: "I built carrier-level forecasting models on AWS. They were rolled out across the UK and EU fulfillment network, with backtesting projecting seven-figure annual savings in GBP.",
+    description: "Carrier-level demand forecasting rolled out across the UK and EU.",
+    detail: "I built multivariate time-series models on AWS for two UK fulfillment centers. The models were rolled out across the UK and EU network. Backtesting projected seven-figure annual savings in GBP.",
   },
   {
     organization: "PwC · Public Sector",
     title: "Legal impact assessment",
-    description: "I led development of a generative AI tool for legal analysis that reduced decision latency by 60%.",
+    description: "Generative AI for public-sector legal analysis.",
+    detail: "I led development of the legal impact assessment tool. It reduced decision latency by 60%.",
   },
   {
     organization: "PwC",
     title: "Multimodal RAG chatbot",
-    description: "I led development of a chatbot that increased team productivity by 25% and received a WirtschaftsWoche Best of Consulting award.",
+    description: "Multimodal search and question answering for internal knowledge.",
+    detail: "I led development of the multimodal RAG chatbot, which increased team productivity by 25%. The project received a WirtschaftsWoche Best of Consulting award.",
   },
   {
     organization: "PwC",
     title: "GraphRAG for legal entities",
-    description: "I led development of a GraphRAG system that used a knowledge graph to disambiguate legal entities.",
+    description: "Knowledge graph retrieval for legal entity disambiguation.",
+    detail: "I led development of a GraphRAG system that combined retrieval with a knowledge graph to distinguish legal entities in documents.",
   },
 ];
 
@@ -62,6 +73,34 @@ const publications = [
   ["Steps towards Addressing Text Classification in Low-Resource Languages", "KONVENS · 2023", "https://aclanthology.org/2023.konvens-main.7/", 3],
   ["Sentiment Analysis on Twitter for German Parties", "KONVENS · 2022", "https://epub.uni-regensburg.de/58241/", 38],
 ] as const;
+
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+  const { organization, title, description, detail, link, label } = project;
+  const dialog = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
+
+  return (
+    <article className="portfolio-card">
+      <p className="portfolio-kicker">{organization}</p>
+      <h3>{title}</h3>
+      <p className="portfolio-card-summary">{description}</p>
+      <button type="button" className="portfolio-card-action" aria-haspopup="dialog"
+        aria-label={`View project: ${title}`} onClick={() => dialog.current?.showModal()}>
+        View project <ArrowRight size={16} aria-hidden="true" />
+      </button>
+      <dialog ref={dialog} className="portfolio-project-dialog" aria-labelledby={titleId}>
+        <button type="button" className="portfolio-dialog-close" aria-label="Close"
+          onClick={() => dialog.current?.close()}>
+          <X size={19} aria-hidden="true" />
+        </button>
+        <p className="portfolio-kicker">{organization}</p>
+        <h2 id={titleId}>{title}</h2>
+        <p className="portfolio-dialog-detail">{detail}</p>
+        {link && <a className="portfolio-text-link" href={link}>{label} <ArrowUpRight size={16} aria-hidden="true" /></a>}
+      </dialog>
+    </article>
+  );
+}
 
 const Index = () => (
   <div className="portfolio">
@@ -95,14 +134,7 @@ const Index = () => (
         <div className="portfolio-wrap">
           <h2 id="work-title">Selected work</h2>
           <div className="portfolio-projects">
-            {projects.map(({ organization, title, description, link, label }) => (
-              <article className="portfolio-card" key={title}>
-                <p className="portfolio-kicker">{organization}</p>
-                <h3>{title}</h3>
-                <p>{description}</p>
-                {link && <a className="portfolio-text-link" href={link}>{label} <ArrowUpRight size={16} aria-hidden="true" /></a>}
-              </article>
-            ))}
+            {projects.map(project => <ProjectCard key={project.title} project={project} />)}
           </div>
           <p className="portfolio-career">I was the first engineer in PwC’s German public-sector AI practice and helped grow the team to 10+ engineers.</p>
         </div>
