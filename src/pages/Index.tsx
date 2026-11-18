@@ -1,5 +1,5 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, Download, X } from "lucide-react";
-import { useId, useRef } from "react";
+import { ArrowDown, ArrowRight, ArrowUpRight, Download, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import "./portfolio.css";
 
 const base = import.meta.env.BASE_URL;
@@ -36,6 +36,7 @@ const projects = [
   {
     organization: "PwC · Public Sector",
     title: "SPARK Workflow",
+    result: { value: "3 years → 6 months", context: "Legal review cycle for the overall workflow" },
     description: "Open-source multi-agent workflow for energy infrastructure approvals.",
     detail: "I led data extraction and built the data layer for the wider program. The overall workflow cut legal review cycles from three years to six months.",
     link: "https://opencode.de/de/software/spark-workflow-10117",
@@ -44,18 +45,21 @@ const projects = [
   {
     organization: "Amazon · London",
     title: "Fulfillment demand forecasting",
+    result: { value: "UK and EU", context: "Rollout across the fulfillment network" },
     description: "Carrier-level demand forecasting rolled out across the UK and EU.",
     detail: "I built multivariate time-series models on AWS for two UK fulfillment centers. The models were rolled out across the UK and EU network. Backtesting projected seven-figure annual savings in GBP.",
   },
   {
     organization: "PwC · Public Sector",
     title: "Legal impact assessment",
+    result: { value: "−60%", context: "Decision latency" },
     description: "Generative AI for public-sector legal analysis.",
     detail: "I led development of the legal impact assessment tool. It reduced decision latency by 60%.",
   },
   {
     organization: "PwC",
     title: "Multimodal RAG chatbot",
+    result: { value: "+25%", context: "Team productivity" },
     description: "Multimodal search and question answering for internal knowledge.",
     detail: "I led development of the multimodal RAG chatbot, which increased team productivity by 25%. The project received a WirtschaftsWoche Best of Consulting award.",
   },
@@ -74,33 +78,44 @@ const publications = [
   ["Sentiment Analysis on Twitter for German Parties", "KONVENS · 2022", "https://epub.uni-regensburg.de/58241/", 38],
 ] as const;
 
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
-  const { organization, title, description, detail, link, label } = project;
-  const dialog = useRef<HTMLDialogElement>(null);
-  const titleId = useId();
+const projectFilters = ["All projects", "PLURAGO", "PwC", "Amazon"] as const;
+
+function ProjectGallery() {
+  const [filter, setFilter] = useState<(typeof projectFilters)[number]>("All projects");
+  const visibleProjects = projects.filter(({ organization }) =>
+    filter === "All projects" || organization.split(" · ")[0] === filter,
+  );
 
   return (
-    <article className="portfolio-card">
-      <button type="button" className="portfolio-project-entry" aria-haspopup="dialog"
-        aria-label={`View project: ${title}`} onClick={() => dialog.current?.showModal()}>
-        <span className="portfolio-project-copy">
-          <span className="portfolio-project-company">{organization}</span>
-          <span className="portfolio-project-title">{title}</span>
-          <span className="portfolio-project-summary">{description}</span>
-        </span>
-        <span className="portfolio-project-arrow" aria-hidden="true"><ArrowRight size={17} /></span>
-      </button>
-      <dialog ref={dialog} className="portfolio-project-dialog" aria-labelledby={titleId}>
-        <button type="button" className="portfolio-dialog-close" aria-label="Close"
-          onClick={() => dialog.current?.close()}>
-          <X size={19} aria-hidden="true" />
-        </button>
-        <p className="portfolio-kicker">{organization}</p>
-        <h2 id={titleId}>{title}</h2>
-        <p className="portfolio-dialog-detail">{detail}</p>
-        {link && <a className="portfolio-text-link" href={link}>{label} <ArrowUpRight size={16} aria-hidden="true" /></a>}
-      </dialog>
-    </article>
+    <>
+      <div className="portfolio-project-filters" role="group" aria-label="Filter projects by company">
+        {projectFilters.map(company => (
+          <button key={company} type="button" aria-pressed={filter === company}
+            onClick={() => setFilter(company)}>{company}</button>
+        ))}
+      </div>
+      <div className="portfolio-projects">
+        {visibleProjects.map(({ organization, title, description, detail, link, label, result }) => (
+          <details className="portfolio-gallery-card" key={title}>
+            <summary>
+              <span className="portfolio-gallery-copy">
+                <span className="portfolio-gallery-company">{organization}</span>
+                <span className="portfolio-gallery-title">{title}</span>
+                <span className="portfolio-gallery-summary">{description}</span>
+              </span>
+              <span className="portfolio-gallery-arrow" aria-hidden="true"><ChevronDown size={17} /></span>
+            </summary>
+            <div className="portfolio-gallery-detail">
+              <p>{detail}</p>
+              {result && <p className="portfolio-gallery-result">
+                <strong>{result.value}</strong><span>{result.context}</span>
+              </p>}
+              {link && <a className="portfolio-text-link" href={link}>{label} <ArrowUpRight size={16} aria-hidden="true" /></a>}
+            </div>
+          </details>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -135,9 +150,7 @@ const Index = () => (
       <section className="portfolio-work" id="work" aria-labelledby="work-title">
         <div className="portfolio-wrap">
           <h2 id="work-title">Selected work</h2>
-          <div className="portfolio-projects">
-            {projects.map(project => <ProjectCard key={project.title} project={project} />)}
-          </div>
+          <ProjectGallery />
           <p className="portfolio-career">I was the first engineer in PwC’s German public-sector AI practice and helped grow the team to 10+ engineers.</p>
         </div>
       </section>
