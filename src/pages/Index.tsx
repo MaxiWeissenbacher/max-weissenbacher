@@ -81,12 +81,14 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
   return (
     <article className="portfolio-card">
-      <p className="portfolio-kicker">{organization}</p>
-      <h3>{title}</h3>
-      <p className="portfolio-card-summary">{description}</p>
-      <button type="button" className="portfolio-card-action" aria-haspopup="dialog"
+      <button type="button" className="portfolio-project-entry" aria-haspopup="dialog"
         aria-label={`View project: ${title}`} onClick={() => dialog.current?.showModal()}>
-        View project <ArrowRight size={16} aria-hidden="true" />
+        <span className="portfolio-project-copy">
+          <span className="portfolio-project-company">{organization}</span>
+          <span className="portfolio-project-title">{title}</span>
+          <span className="portfolio-project-summary">{description}</span>
+        </span>
+        <span className="portfolio-project-arrow" aria-hidden="true"><ArrowRight size={17} /></span>
       </button>
       <dialog ref={dialog} className="portfolio-project-dialog" aria-labelledby={titleId}>
         <button type="button" className="portfolio-dialog-close" aria-label="Close"
