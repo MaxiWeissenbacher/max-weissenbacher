@@ -52,9 +52,9 @@ const Index = () => (
     <main id="main">
       <section className="portfolio-hero portfolio-wrap" id="top" aria-labelledby="hero-title">
         <div>
-          <p className="portfolio-kicker">AI Engineer · Co-founder & CTO</p>
-          <h1 id="hero-title">I build AI systems<br className="portfolio-desktop-break" /> for real <em>workflows.</em></h1>
-          <p className="portfolio-lede">I lead engineering at PLURAGO in Munich. My work spans real estate operations, customer-facing AI consulting, and production LLM systems for the German public sector.</p>
+          <h1 id="hero-title">Maximilian Weissenbacher</h1>
+          <p className="portfolio-role">Senior AI Engineer · Co-Founder & CTO</p>
+          <p className="portfolio-lede">I lead engineering at PLURAGO in Munich, building AI workflows for real estate teams and for our own property management operations. At PwC, I worked with customers in the German public sector to build and deploy LLM applications.</p>
           <div className="portfolio-actions">
             <a className="portfolio-primary" href="#work">View selected work <ArrowDown size={17} aria-hidden="true" /></a>
             <a className="portfolio-text-link" href={`${base}cv_weissenbacher.pdf`} download="Maximilian_Weissenbacher_CV.pdf">Download CV <Download size={16} aria-hidden="true" /></a>
@@ -79,7 +79,7 @@ const Index = () => (
               </article>
             ))}
           </div>
-          <p className="portfolio-career">Previously, I was the first engineer in PwC’s German public-sector AI practice. At Amazon, I built demand forecasting models that were rolled out across the UK and EU fulfillment network.</p>
+          <p className="portfolio-career">I was the first engineer in PwC’s German public-sector AI practice as it grew to more than ten engineers. At Amazon, my demand forecasting work was rolled out across the UK and EU fulfillment network.</p>
         </div>
       </section>
 
