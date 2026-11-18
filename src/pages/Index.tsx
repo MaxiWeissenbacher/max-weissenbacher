@@ -10,15 +10,15 @@ const projects = [
     organization: "PLURAGO · Co-founder & CTO",
     title: "AI for real estate operations",
     description: "I work with real estate teams to map their workflows, train staff on Claude, and build agents for selected tasks. I also build the software for our own AI-native property management business.",
-    detail: "Multi-agent workflows, MCP, document extraction with page-level evidence, and a regression eval suite.",
+    detail: "Our initial multi-agent platform included an MCP server, document extraction with page-level evidence, and a regression eval suite.",
     link: "https://plurago.ai",
     label: "Visit PLURAGO",
   },
   {
     organization: "PwC · Stadt Landshut",
     title: "A public-sector RAG chatbot",
-    description: "I built and deployed a production chatbot on the city’s own infrastructure. I worked with city staff to build a reference dataset and evaluate answer quality.",
-    detail: "End-to-end ownership from retrieval and model selection to GPU infrastructure and deployment.",
+    description: "I independently built and deployed a production chatbot on the city’s own infrastructure.",
+    detail: "I worked with city staff to create a reference dataset and evaluate answer quality.",
   },
   {
     organization: "PwC · SPARK Workflow",
@@ -79,7 +79,7 @@ const Index = () => (
               </article>
             ))}
           </div>
-          <p className="portfolio-career">I was the first engineer in PwC’s German public-sector AI practice as it grew to more than ten engineers. At Amazon, my demand forecasting work was rolled out across the UK and EU fulfillment network.</p>
+          <p className="portfolio-career">I was the first engineer in PwC’s German public-sector AI practice and helped grow the team to 10+ engineers. At Amazon, my demand forecasting work was rolled out across the UK and EU fulfillment network.</p>
         </div>
       </section>
 
